@@ -1,5 +1,7 @@
 # Grouparoo Docker Omnibus Image
 
+[![Node.js CI](https://github.com/grouparoo/omnibus/actions/workflows/test.yml/badge.svg)](https://github.com/grouparoo/omnibus/actions/workflows/test.yml)
+
 This repository builds the `grouparoo/omnibus` Docker image. This Docker image contains the following packages to make it easy to trial the commercially available Grouparoo packages.
 
 This Docker Image is provided for trial use only. The trial period is not to exceed one month. After that one month period, you must obtain a commercial license from Grouparoo Inc. to continue using this software.

@@ -17,6 +17,8 @@ jobs:
           token: ${{ secrets.BOT_GITHUB_PAT }}
       - run: cp .env.example .env
       - run: sudo npm install -g npm
+      - name: Configure NPM token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.OMNIBUS_NPM_TOKEN }}" > .npmrc
       - run: npm install
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u

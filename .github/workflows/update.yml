@@ -16,6 +16,7 @@ jobs:
         with:
           token: ${{ secrets.BOT_GITHUB_PAT }}
       - run: cp .env.example .env
+      - run: sudo npm install -g npm
       - run: npm install
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u

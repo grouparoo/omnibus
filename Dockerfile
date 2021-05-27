@@ -16,7 +16,9 @@ ENV S3_REGION=""
 ENV S3_BUCKET=""
 
 COPY . .
-RUN npm install && rm -rf .npmrc
+ARG NPM_TOKEN
+RUN npm install
+RUN rm -rf .npmrc
 RUN npm prune
 
 WORKDIR /grouparoo/node_modules/@grouparoo/core

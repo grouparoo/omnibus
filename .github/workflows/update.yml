@@ -22,6 +22,7 @@ jobs:
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u
       - run: npm install
+          NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
       - uses: stefanzweifel/git-auto-commit-action@v4

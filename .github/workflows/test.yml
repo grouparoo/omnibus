@@ -45,6 +45,8 @@ jobs:
       - name: Configure NPM token
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.OMNIBUS_NPM_TOKEN }}" > .npmrc
       - run: npm install
+        env:
+          NPM_TOKEN: ${{ OMNIBUS_NPM_TOKEN }}
       - run: npm test
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres

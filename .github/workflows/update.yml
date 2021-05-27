@@ -18,7 +18,7 @@ jobs:
       - run: cp .env.example .env
       - run: npm install
         env:
-          NPM_TOKEN: ${{ OMNIBUS_NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u
       - run: npm install

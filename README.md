@@ -9,7 +9,8 @@ This Docker Image is provided for trial use only. The trial period is not to exc
 ## Quickstart
 
 ```
-curl -L https://www.grouparoo.com/docker-compose --output docker-compose.yml && docker-compose up
+curl -L https://www.grouparoo.com/docker-compose --output docker-compose.yml
+docker-compose up
 ```
 
 ## What's Included

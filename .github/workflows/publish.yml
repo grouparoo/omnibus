@@ -31,11 +31,7 @@ jobs:
         with:
           push: true
           context: .
-          tags:
-            [
-              "grouparoo/omnibus:latest",
-              "grouparoo/omnibus:v${{ env.CORE_VERSION }}",
-            ]
+          tags: grouparoo/omnibus:latest, grouparoo/omnibus:v${{ env.CORE_VERSION }}
           secrets: |
             "NPM_TOKEN=${{ secrets.OMNIBUS_NPM_TOKEN }}"
       - name: Image digest

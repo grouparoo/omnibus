@@ -20,7 +20,7 @@ services:
       - "postgres-data:/var/lib/postgresql/data"
 
   grouparoo-web:
-    image: grouparoo/app-example-docker
+    image: grouparoo/omnibus
     restart: always
     ports:
       - 3000:3000
@@ -39,7 +39,7 @@ services:
       - grouparoo_backend
 
   grouparoo-worker:
-    image: grouparoo/app-example-docker
+    image: grouparoo/omnibus
     restart: always
     environment:
       REDIS_URL: redis://redis:6379/0

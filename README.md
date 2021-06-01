@@ -11,6 +11,8 @@ This Docker Image is provided for trial use only. The trial period is not to exc
 ```
 curl -L https://www.grouparoo.com/docker-compose --output docker-compose.yml
 docker compose up
+# wait for boot
+vist http://localhost:3000
 ```
 
 ## What's Included
@@ -74,6 +76,8 @@ You can quickly demo a Docker Compose Grouparoo deployment via:
 ```
 curl -L https://www.grouparoo.com/docker-compose --output docker-compose.yml
 docker compose up
+# wait for boot
+vist http://localhost:3000
 ```
 
 Wait for the image to build and eventually visit `http://localhost:3000` to see the Grouparoo UI. Learn more by viewing the `docker-compose.yml` file included in this repository. Remember, all environment variables can be changed from their defaults, including database information, PORT, etc.

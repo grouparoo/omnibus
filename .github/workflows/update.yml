@@ -16,14 +16,14 @@ jobs:
         with:
           token: ${{ secrets.BOT_GITHUB_PAT }}
       - run: cp .env.example .env
+      - name: configure .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.OMNIBUS_NPM_TOKEN }}" > .npmrc
       - run: npm install
         env:
           NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}
       - run: sudo npm install -g npm-check-updates
       - run: npm-check-updates -u
       - run: npm install
-        env:
-          NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
       - uses: stefanzweifel/git-auto-commit-action@v4

@@ -1,5 +1,8 @@
 FROM node:14
 
+# set by the Github Action
+RUN --mount=type=secret,id=NPM_TOKEN cat /run/secrets/NPM_TOKEN
+
 WORKDIR /grouparoo
 
 ENV NODE_ENV='production'
@@ -16,9 +19,7 @@ ENV S3_REGION=""
 ENV S3_BUCKET=""
 
 COPY . .
-ARG NPM_TOKEN
-RUN npm install
-RUN rm -rf .npmrc
+RUN NPM_TOKEN=`cat /run/secrets/NPM_TOKEN` && npm install && rm -rf .npmrc
 RUN npm prune
 
 WORKDIR /grouparoo/node_modules/@grouparoo/core

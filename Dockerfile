@@ -16,7 +16,6 @@ ENV S3_REGION=""
 ENV S3_BUCKET=""
 
 COPY . .
-RUN npm install
 RUN --mount=type=secret,id=npmrc,target=/grouparoo/.npmrc npm install
 RUN npm prune
 

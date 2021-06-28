@@ -22,7 +22,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}
       - run: sudo npm install -g npm-check-updates
-      - run: npm-check-updates -u
+      - run: npm-check-updates -u --target greatest
       - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV

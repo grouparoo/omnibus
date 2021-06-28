@@ -48,6 +48,12 @@ This repository contains:
 
 ## Running with Docker
 
+```bash
+docker pull grouparoo/omnibus:v{version}
+```
+
+⚠️ Note: DO NOT USE The `latest` release - pick a version number! The `latest` release of this image will include our Alpha packages, which may not be suitable for Production.
+
 At minimum, the following Environment variables will need to be set:
 
 ```

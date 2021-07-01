@@ -18,6 +18,8 @@ jobs:
       - run: cp .env.example .env
       - name: configure .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.OMNIBUS_NPM_TOKEN }}" > .npmrc
+      - name: check npm user
+        run: npm whoami
       - run: npm install
         env:
           NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}

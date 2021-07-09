@@ -43,10 +43,8 @@ jobs:
       # we want to test a 'fresh' install for new users
       - run: rm -rf node_modules && rm package-lock.json
       - name: Configure NPM token
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.OMNIBUS_NPM_TOKEN }}" > .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.BOT_NPM_TOKEN }}" > .npmrc
       - run: npm install
-        env:
-          NPM_TOKEN: ${{ secrets.OMNIBUS_NPM_TOKEN }}
       - run: npm test
         env:
           DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres

@@ -33,6 +33,6 @@ jobs:
           push: true
           tags: grouparoo/omnibus:latest, grouparoo/omnibus:v${{ env.CORE_VERSION }}
           secrets: |
-            "npmrc=//registry.npmjs.org/:_authToken=${{ secrets.OMNIBUS_NPM_TOKEN }}"
+            "npmrc=//registry.npmjs.org/:_authToken=${{ secrets.BOT_NPM_TOKEN }}"
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

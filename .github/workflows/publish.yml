@@ -42,6 +42,7 @@ jobs:
     if: ${{ github.repository == 'grouparoo/omnibus' }}
     needs: publish
     steps:
+      - run: sleep 60
       - name: Notify
         run: >-
           curl

@@ -19,7 +19,7 @@ COPY . .
 RUN --mount=type=secret,id=npmrc,target=/grouparoo/.npmrc npm install
 RUN npm prune
 
-ENTRYPOINT [ "./node_modules/grouparoo/dist/grouparoo.js" ]
+ENTRYPOINT [ "./node_modules/.bin/grouparoo" ]
 CMD [ "start" ]
 
 EXPOSE $PORT/tcp

@@ -31,7 +31,8 @@
     "@grouparoo/sentry": "0.5.3-alpha.5",
     "@grouparoo/snowflake": "0.5.3-alpha.5",
     "@grouparoo/ui-enterprise": "0.5.3-alpha.5",
-    "@grouparoo/zendesk": "0.5.3-alpha.5"
+    "@grouparoo/zendesk": "0.5.3-alpha.5",
+    "grouparoo": "0.5.3-alpha.5"
   },
   "scripts": {
     "start": "cd node_modules/@grouparoo/core && ./bin/start",

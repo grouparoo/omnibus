@@ -20,9 +20,11 @@ docker compose up
 This repository contains:
 
 - `@grouparoo/bigquery` - Open Source
+- `@grouparoo/calculated-property` - Open Source
 - `@grouparoo/core` - Open Source
 - `@grouparoo/csv` - Open Source
 - `@grouparoo/customerio` - Open Source
+- `@grouparoo/eloqua` - Open Source
 - `@grouparoo/facebook` - Open Source
 - `@grouparoo/files-s3` - Open Source
 - `@grouparoo/google-sheets` - Open Source
@@ -31,7 +33,9 @@ This repository contains:
 - `@grouparoo/iterable` - Open Source
 - `@grouparoo/logger` - Open Source
 - `@grouparoo/mailchimp` - Open Source
+- `@grouparoo/mailjet` - Open Source
 - `@grouparoo/marketo` - Open Source
+- `@grouparoo/mixpanel` - Open Source
 - `@grouparoo/mongo` - Open Source
 - `@grouparoo/mysql` - Open Source
 - `@grouparoo/onesignal` - Open Source
@@ -39,9 +43,11 @@ This repository contains:
 - `@grouparoo/pipedrive` - Open Source
 - `@grouparoo/postgres` - Open Source
 - `@grouparoo/redshift` - Open Source
+- `@grouparoo/sailthru` - Open Source
 - `@grouparoo/salesforce` - Open Source
 - `@grouparoo/sendgrid` - Open Source
 - `@grouparoo/sentry` - Open Source
+- `@grouparoo/sqlite` - Open Source
 - `@grouparoo/snowflake` - Open Source
 - `@grouparoo/ui-enterprise` - Commercially Licensed
 - `@grouparoo/zendesk`- Open Source

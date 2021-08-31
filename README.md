@@ -47,8 +47,8 @@ This repository contains:
 - `@grouparoo/salesforce` - Open Source
 - `@grouparoo/sendgrid` - Open Source
 - `@grouparoo/sentry` - Open Source
-- `@grouparoo/sqlite` - Open Source
 - `@grouparoo/snowflake` - Open Source
+- `@grouparoo/sqlite` - Open Source
 - `@grouparoo/ui-enterprise` - Commercially Licensed
 - `@grouparoo/zendesk`- Open Source
 

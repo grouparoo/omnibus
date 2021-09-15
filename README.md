@@ -26,7 +26,6 @@ This repository contains:
 - `@grouparoo/customerio` - Open Source
 - `@grouparoo/eloqua` - Open Source
 - `@grouparoo/facebook` - Open Source
-- `@grouparoo/files-s3` - Open Source
 - `@grouparoo/google-sheets` - Open Source
 - `@grouparoo/hubspot` - Open Source
 - `@grouparoo/intercom` - Open Source

@@ -98,3 +98,38 @@ Wait for the image to build and eventually visit `http://localhost:3000` to see 
 ---
 
 Visit https://github.com/grouparoo/app-examples to see other Grouparoo Example Projects.
+
+---
+
+## Publishing Notes
+
+You can build and push this Docker image locally
+
+0. Start fresh
+
+```bash
+docker kill $(docker ps -q) # stop all running docker containers
+docker system prune -a # erase all local docker images
+```
+
+1. Build the image with the appropriate tag
+
+```bash
+docker build -t grouparoo/omnibus:v0.6.3 --secret id=npmrc,src=$HOME/.npmrc .
+```
+
+- Note that we are using your local `~/.npmrc` for installing the commercial Grouparoo Plugins. Change this if needed.
+- Note we use `v` in font of the version number. You can also add the `latest` tag if needed.
+
+1. Confirm that the image is created properly with `docker images`
+
+```bash
+REPOSITORY          TAG       IMAGE ID       CREATED          SIZE
+grouparoo/omnibus   v0.6.3    6a3c9137d2a0   11 seconds ago   1.46GB
+```
+
+3. Push the image + tag
+
+```bash
+docker push grouparoo/omnibus:v0.6.3
+```

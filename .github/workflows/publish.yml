@@ -34,7 +34,7 @@ jobs:
 
       # If we are on the main branch, use the "latest" tag
       - name: Build Main Branch
-        if: ${{ github.event.inputs.branch == 'main' }}
+        if: github.event.inputs.branch == 'main' || github.event.inputs.branch == ''
         id: docker_build_main
         uses: docker/build-push-action@v2
         with:
@@ -46,7 +46,7 @@ jobs:
 
       # If we are NOT on the main branch, do not use the "latest" tag
       - name: Build Other Branch
-        if: ${{ github.event.inputs.branch != 'main' }}
+        if: github.event.inputs.branch != 'main'
         id: docker_build_branch
         uses: docker/build-push-action@v2
         with:

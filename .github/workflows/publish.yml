@@ -34,7 +34,7 @@ jobs:
       # If we are on the main branch, use the "latest" tag
       - name: Build Main Branch
         if: ${{ github.ref == 'refs/heads/main' }}
-        id: docker_build
+        id: docker_build_main
         uses: docker/build-push-action@v2
         with:
           context: .
@@ -45,7 +45,7 @@ jobs:
       # If we are NOT on the main branch, do not use the "latest" tag
       - name: Build Other Branch
         if: ${{ github.ref != 'refs/heads/main' }}
-        id: docker_build
+        id: docker_build_branch
         uses: docker/build-push-action@v2
         with:
           context: .
@@ -53,8 +53,6 @@ jobs:
           tags: grouparoo/omnibus:v${{ env.CORE_VERSION }}
           secrets: |
             "npmrc=//registry.npmjs.org/:_authToken=${{ secrets.BOT_NPM_TOKEN }}"
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
 
   notify-terraform:
     runs-on: ubuntu-latest

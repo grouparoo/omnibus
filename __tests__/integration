@@ -7,7 +7,7 @@ cd "`dirname "$0"`/.."
 printf "*** starting server ***\r\n"
 npm run start &
 
-sleep 10
+sleep 30
 
 printf "*** checking status ***\r\n"
 curl http://localhost:3000/api/v1/status/public

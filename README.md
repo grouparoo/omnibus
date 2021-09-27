@@ -21,6 +21,7 @@ This repository contains:
 
 - `@grouparoo/bigquery` - Open Source
 - `@grouparoo/calculated-property` - Open Source
+- `@grouparoo/cloudwatch` - Open Source
 - `@grouparoo/core` - Open Source
 - `@grouparoo/csv` - Open Source
 - `@grouparoo/customerio` - Open Source
@@ -94,6 +95,16 @@ docker compose up
 Wait for the image to build and eventually visit `http://localhost:3000` to see the Grouparoo UI. Learn more by viewing the `docker-compose.yml` file included in this repository. Remember, all environment variables can be changed from their defaults, including database information, PORT, etc.
 
 ⚠️ Note: The example `docker-compose.yml` in this repository has limited data persistence and also no load balancing between `grouparoo-web` instances. Do not use in production.
+
+## AWS Cloudwatch Logs
+
+This image can be configured to store logs with AWS Cloudwatch. To enabled this, set the following environment variables:
+
+- `S3_ACCESS_KEY`
+- `S3_SECRET_ACCESS_KEY`
+- `S3_REGION`
+
+Note that, `GROUPAROO_LOG_LEVEL` also effects this logger. By default, the log-level of this logger is is "notice" NOT "info".
 
 ---
 

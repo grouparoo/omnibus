@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@grouparoo/bigquery": "0.7.0-alpha.8",
+    "@grouparoo/cloudwatch": "0.7.0-alpha.8",
     "@grouparoo/calculated-property": "0.7.0-alpha.8",
     "@grouparoo/core": "0.7.0-alpha.8",
     "@grouparoo/csv": "0.7.0-alpha.8",
@@ -47,6 +48,7 @@
     "plugins": [
       "@grouparoo/bigquery",
       "@grouparoo/calculated-property",
+      "@grouparoo/cloudwatch",
       "@grouparoo/csv",
       "@grouparoo/customerio",
       "@grouparoo/eloqua",

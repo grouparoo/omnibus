@@ -101,8 +101,8 @@ Wait for the image to build and eventually visit `http://localhost:3000` to see 
 This image can be configured to store logs with AWS Cloudwatch. To enabled this, set the following environment variables:
 
 - `AWS_ACCESS_KEY_ID`
-- `AWX_SECRET_ACCESS_KEY`
-- `AWX_REGION`
+- `AWS_SECRET_ACCESS_KEY`
+- `AWS_REGION`
 
 Note that, `GROUPAROO_LOG_LEVEL` also effects this logger. By default, the log-level of this logger is is "notice" NOT "info".
 

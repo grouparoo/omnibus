@@ -28,5 +28,6 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
+          reviewers: ${{ secrets.BOT_PR_REVIEWER_USERS }}
           title: "Updating Grouparoo to v${{ env.CORE_VERSION }}"
           body: "Grouparoo v${{ env.CORE_VERSION }} is now available."

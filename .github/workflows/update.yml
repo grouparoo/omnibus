@@ -9,8 +9,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.BOT_GITHUB_PAT }}
       - run: cp .env.example .env
       - name: configure .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.BOT_NPM_TOKEN }}" > .npmrc
@@ -22,11 +20,14 @@ jobs:
       - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Create commits
+        run: |
+          git config user.name 'Grouparoo Bot'
+          git config user.email 'hello@grouparoo.com'
+          git commit -am "Updating Packages to v${{ env.CORE_VERSION }}"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
         with:
-          commit_message: Updating Packages to v${{ env.CORE_VERSION }}
-          commit_user_name: Grouparoo Bot
-          commit_user_email: hello@grouparoo.com
-          commit_author: Grouparoo Bot <hello@grouparoo.com>
-          branch: ${{ github.head_ref }}
-          tagging_message: v${{ env.CORE_VERSION }}
+          reviewers: ${{ secrets.BOT_PR_REVIEWER_USERS }}
+          title: "Updating Grouparoo to v${{ env.CORE_VERSION }}"
+          body: "Grouparoo v${{ env.CORE_VERSION }} is now available."

@@ -9,7 +9,7 @@
     "@grouparoo/bigquery": "0.7.0-alpha.11",
     "@grouparoo/cloudwatch": "0.7.0-alpha.11",
     "@grouparoo/calculated-property": "0.7.0-alpha.11",
-    "@grouparoo/core": "0.7.0-alpha.11",
+    "@grouparoo/core": "0.7.0-alpha.12",
     "@grouparoo/csv": "0.7.0-alpha.11",
     "@grouparoo/customerio": "0.7.0-alpha.11",
     "@grouparoo/eloqua": "0.7.0-alpha.11",

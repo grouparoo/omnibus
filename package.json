@@ -23,7 +23,7 @@
     "@grouparoo/mailjet": "0.7.0-alpha.11",
     "@grouparoo/marketo": "0.7.0-alpha.11",
     "@grouparoo/mixpanel": "0.7.0-alpha.11",
-    "@grouparoo/mongo": "0.7.0-alpha.11",
+    "@grouparoo/mongo": "0.7.0-alpha.12",
     "@grouparoo/mysql": "0.7.0-alpha.11",
     "@grouparoo/onesignal": "0.7.0-alpha.11",
     "@grouparoo/pardot": "0.7.0-alpha.11",

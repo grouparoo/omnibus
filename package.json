@@ -6,7 +6,7 @@
   "license": "unlicensed",
   "private": true,
   "dependencies": {
-    "@grouparoo/bigquery": "0.7.0-alpha.11",
+    "@grouparoo/bigquery": "0.7.0-alpha.12",
     "@grouparoo/cloudwatch": "0.7.0-alpha.11",
     "@grouparoo/calculated-property": "0.7.0-alpha.11",
     "@grouparoo/core": "0.7.0-alpha.11",

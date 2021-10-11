@@ -25,7 +25,7 @@
     "@grouparoo/mixpanel": "0.7.0-alpha.11",
     "@grouparoo/mongo": "0.7.0-alpha.11",
     "@grouparoo/mysql": "0.7.0-alpha.11",
-    "@grouparoo/onesignal": "0.7.0-alpha.11",
+    "@grouparoo/onesignal": "0.7.0-alpha.12",
     "@grouparoo/pardot": "0.7.0-alpha.11",
     "@grouparoo/pipedrive": "0.7.0-alpha.11",
     "@grouparoo/postgres": "0.7.0-alpha.11",

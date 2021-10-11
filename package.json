@@ -12,7 +12,7 @@
     "@grouparoo/core": "0.7.0-alpha.11",
     "@grouparoo/csv": "0.7.0-alpha.11",
     "@grouparoo/customerio": "0.7.0-alpha.11",
-    "@grouparoo/eloqua": "0.7.0-alpha.11",
+    "@grouparoo/eloqua": "0.7.0-alpha.12",
     "@grouparoo/facebook": "0.7.0-alpha.11",
     "@grouparoo/google-sheets": "0.7.0-alpha.11",
     "@grouparoo/hubspot": "0.7.0-alpha.11",

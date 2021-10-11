@@ -29,7 +29,7 @@
     "@grouparoo/pardot": "0.7.0-alpha.11",
     "@grouparoo/pipedrive": "0.7.0-alpha.11",
     "@grouparoo/postgres": "0.7.0-alpha.11",
-    "@grouparoo/redshift": "0.7.0-alpha.11",
+    "@grouparoo/redshift": "0.7.0-alpha.12",
     "@grouparoo/sailthru": "0.7.0-alpha.11",
     "@grouparoo/salesforce": "0.7.0-alpha.11",
     "@grouparoo/sendgrid": "0.7.0-alpha.11",

@@ -20,6 +20,12 @@ jobs:
       - run: npm install
       - name: store-core-version
         run: echo CORE_VERSION=`cat package.json | jq -r '.dependencies."@grouparoo/core"'` >> $GITHUB_ENV
+      - name: Generate token
+        uses: getsentry/action-github-app-token@v1
+        id: app_auth
+        with:
+          app_id: ${{ secrets.OMNIBUS_APP_ID }}
+          private_key: ${{ secrets.OMNIBUS_APP_PRIVATE_KEY }}
       - name: Create commits
         run: |
           git config user.name 'Grouparoo Bot'
@@ -28,6 +34,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
+          token: ${{ steps.app_auth.outputs.token }}
           reviewers: ${{ secrets.BOT_PR_REVIEWER_USERS }}
           title: "Updating Grouparoo to v${{ env.CORE_VERSION }}"
           body: "Grouparoo v${{ env.CORE_VERSION }} is now available."

@@ -37,7 +37,7 @@
     "@grouparoo/snowflake": "0.7.0-alpha.11",
     "@grouparoo/sqlite": "0.7.0-alpha.11",
     "@grouparoo/ui-enterprise": "0.7.0-alpha.11",
-    "@grouparoo/zendesk": "0.7.0-alpha.11",
+    "@grouparoo/zendesk": "0.7.0-alpha.12",
     "grouparoo": "0.7.0-alpha.11"
   },
   "scripts": {

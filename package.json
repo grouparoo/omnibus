@@ -14,7 +14,7 @@
     "@grouparoo/customerio": "0.7.0-alpha.11",
     "@grouparoo/eloqua": "0.7.0-alpha.11",
     "@grouparoo/facebook": "0.7.0-alpha.11",
-    "@grouparoo/google-sheets": "0.7.0-alpha.11",
+    "@grouparoo/google-sheets": "0.7.0-alpha.12",
     "@grouparoo/hubspot": "0.7.0-alpha.11",
     "@grouparoo/intercom": "0.7.0-alpha.11",
     "@grouparoo/iterable": "0.7.0-alpha.11",

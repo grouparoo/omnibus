@@ -34,7 +34,7 @@
     "@grouparoo/salesforce": "0.7.0-alpha.11",
     "@grouparoo/sendgrid": "0.7.0-alpha.11",
     "@grouparoo/sentry": "0.7.0-alpha.11",
-    "@grouparoo/snowflake": "0.7.0-alpha.11",
+    "@grouparoo/snowflake": "0.7.0-alpha.12",
     "@grouparoo/sqlite": "0.7.0-alpha.11",
     "@grouparoo/ui-enterprise": "0.7.0-alpha.11",
     "@grouparoo/zendesk": "0.7.0-alpha.11",

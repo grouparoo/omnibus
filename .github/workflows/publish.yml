@@ -48,7 +48,7 @@ jobs:
           context: .
           push: true
           tags: grouparoo/omnibus:v${{ env.CORE_VERSION }}
-          build-args: "GROUPAROO_VERSION={{ env.CORE_VERSION }}"
+          build-args: "GROUPAROO_VERSION=${{ env.CORE_VERSION }}"
           secrets: |
             "npmrc=//registry.npmjs.org/:_authToken=${{ secrets.BOT_NPM_TOKEN }}"
 

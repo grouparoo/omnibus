@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
+export GROUPAROO_TELEMETRY_ENABLED=false
 
 cd "`dirname "$0"`/.."
 

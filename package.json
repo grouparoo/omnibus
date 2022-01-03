@@ -9,9 +9,10 @@
     "node": ">=12.0.0 <17.0.0"
   },
   "dependencies": {
+    "@grouparoo/airtable": "^0.8.0-alpha.3",
     "@grouparoo/bigquery": "0.8.0-alpha.3",
-    "@grouparoo/cloudwatch": "0.8.0-alpha.3",
     "@grouparoo/calculated-property": "0.8.0-alpha.3",
+    "@grouparoo/cloudwatch": "0.8.0-alpha.3",
     "@grouparoo/core": "0.8.0-alpha.3",
     "@grouparoo/csv": "0.8.0-alpha.3",
     "@grouparoo/customerio": "0.8.0-alpha.3",
@@ -49,6 +50,7 @@
   },
   "grouparoo": {
     "plugins": [
+      "@grouparoo/airtable",
       "@grouparoo/bigquery",
       "@grouparoo/calculated-property",
       "@grouparoo/cloudwatch",

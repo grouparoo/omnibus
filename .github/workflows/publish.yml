@@ -52,23 +52,23 @@ jobs:
           secrets: |
             "npmrc=//registry.npmjs.org/:_authToken=${{ secrets.BOT_NPM_TOKEN }}"
 
-  notify-terraform:
-    runs-on: ubuntu-latest
-    if: ${{ github.repository == 'grouparoo/omnibus' }}
-    needs: publish
-    steps:
-      - name: Notifier auth
-        uses: getsentry/action-github-app-token@v1
-        id: notifier_auth
-        with:
-          app_id: ${{ secrets.TERRAFORM_NOTIFIER_APP_ID }}
-          private_key: ${{ secrets.TERRAFORM_NOTIFIER_APP_PRIVATE_KEY }}
-      - name: Notify
-        run: >-
-          curl
-          -X POST
-          -H "Authorization: token ${{ steps.notifier_auth.outputs.token }}"
-          -H "Accept: application/vnd.github.everest-preview+json"
-          -H "Content-Type: application/json"
-          https://api.github.com/repos/grouparoo/grouparoo-infra-apps/actions/workflows/update-docker-versions.yml/dispatches
-          --data '{"ref": "main"}'
+#   notify-terraform:
+#     runs-on: ubuntu-latest
+#     if: ${{ github.repository == 'grouparoo/omnibus' }}
+#     needs: publish
+#     steps:
+#       - name: Notifier auth
+#         uses: getsentry/action-github-app-token@v1
+#         id: notifier_auth
+#         with:
+#           app_id: ${{ secrets.TERRAFORM_NOTIFIER_APP_ID }}
+#           private_key: ${{ secrets.TERRAFORM_NOTIFIER_APP_PRIVATE_KEY }}
+#       - name: Notify
+#         run: >-
+#           curl
+#           -X POST
+#           -H "Authorization: token ${{ steps.notifier_auth.outputs.token }}"
+#           -H "Accept: application/vnd.github.everest-preview+json"
+#           -H "Content-Type: application/json"
+#           https://api.github.com/repos/grouparoo/grouparoo-infra-apps/actions/workflows/update-docker-versions.yml/dispatches
+#           --data '{"ref": "main"}'
